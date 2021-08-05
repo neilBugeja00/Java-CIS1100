@@ -59,8 +59,5 @@ public class CQueue {
         root.show();
     }
 
-    private test(){
-        
-    }
 
 }//end class
