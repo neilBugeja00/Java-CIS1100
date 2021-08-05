@@ -25,7 +25,4 @@ public abstract class AnyClass{
         
     }
 
-    public void test(){
-        
-    }
 }
