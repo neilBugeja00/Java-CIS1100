@@ -2,7 +2,7 @@
 \input{head}
 \usepackage{graphicx}
 \begin{document}
-\graphicspath{{home/Neil/Year 1/Semester 1/Java/New/Java-CIS1100/Documentation/Images}}
+\graphicspath{{home/Neil/Computing and business/Year 1/Semester 1/Java-CIS1100/Documentation/Images}}
 
 %-------------------------------
 %	TITLE SECTION
@@ -65,7 +65,6 @@ This method makes use of the same principles and ideas used to create the queue 
 \subsection{AnyClass serve()}
 test. jg
 test 2 again
-test 3 again
 
 \bigskip
 
