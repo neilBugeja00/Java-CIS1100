@@ -24,4 +24,8 @@ public abstract class AnyClass{
     public void edit(){
         
     }
+
+    public void test(){
+        
+    }
 }
