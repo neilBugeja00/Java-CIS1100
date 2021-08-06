@@ -7,7 +7,7 @@ public class CQueue {
     CQueue queue = new CQueue();
 
     //declare queue size & set root to null
-    private final int CIRCULAR_QUEUE_SIZE = 20;
+    private final int CIRCULAR_QUEUE_SIZE = 2;
     private Node root = null;
 
     public CQueue(){
@@ -17,7 +17,7 @@ public class CQueue {
         }
     }
 
-    private void addNode(Node node){       
+    public void addNode(Node node){       
         if(root == null){
             root = node;
             node.setNext(root);
@@ -32,7 +32,7 @@ public class CQueue {
         }        
     }
 
-    private boolean put(AnyClass newObj){
+    public boolean put(AnyClass newObj){
         if(root.getData()==null){
             root.setData(newObj);
             return true;
@@ -48,16 +48,31 @@ public class CQueue {
         return false;        
     }
 
-    private AnyClass serve(){
-        if(root == null){
-            System.out.println("Root is null");
-            
-        }else{
-            root = root.getNext();
-
+    public void listAll(){
+        Node n = root;
+        while(n.getNext()!=root){
+            if(n.getData()!=null){
+                System.out.println(n.getData());
+            }
+            n = n.getNext();
         }
-        root.show();
     }
+
+    public AnyClass editObject(String key){
+        Node n = root;
+        while(n.getNext()!=root){
+            if(n.getData()!=null){
+                if(n.getData().getKey().equalsIgnoreCase(key)){
+                    return n.getData(); //Key successfully found
+                }
+            }
+            n = n.getNext();
+        }
+        return null; //not found
+    }
+
+
+    
 
 
 }//end class
