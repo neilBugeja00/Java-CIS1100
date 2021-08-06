@@ -66,6 +66,11 @@ This method makes use of the same principles and ideas used to create the queue 
 test. jg
 test 2 again
 
+\subsection{void listAll()}
+To list all the data in the circular queue, this method will traverse by the same method that it has been doing beforehand. The only difference is that every time a node that is filled with data is encountered, it gets the data and outputs it for the user to see. By the end of the method all the data in the queue will be displayed.\\
+
+\subsection{AnyClass editObject(String key)}
+This method will once again begin by traversing the entire queue. If it encounters an array with data it will check to see if it matches with the key that the user wishes to edit. 
 \bigskip
 
 %------------------------------------------------
