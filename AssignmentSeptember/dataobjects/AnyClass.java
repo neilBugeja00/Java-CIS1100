@@ -1,9 +1,12 @@
 package dataobjects;
 
-public abstract class AnyClass{
-    int seqNo;
+public class AnyClass{
 
-    public AnyClass(){}
+    public int seqNo;
+
+    public AnyClass(int seqNo){
+        this.seqNo = seqNo;
+    }
 
     public int getSeqNo(){
         return seqNo;
@@ -14,7 +17,8 @@ public abstract class AnyClass{
     }
 
     public String getData(){
-        return String.valueOf(seqNo);
+        //return String.valueOf(seqNo);
+        return "Sequence number: "+seqNo;
     }
 
     public String getKey(){
