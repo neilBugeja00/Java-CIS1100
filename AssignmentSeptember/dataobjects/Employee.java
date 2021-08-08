@@ -12,4 +12,20 @@ public class Employee extends AnyClass{
         this.surname = surname;
         this.pay = pay;        
     }
+
+    public double getSalary(){
+        return pay;
+    }
+
+    public String getData(){
+        return super.getData() + " Employee " +surname+ " salary " + getSalary();
+    }
+
+    public String getKey(){
+        return surname;
+    }
+
+    public void setName(double newPay){
+        pay = newPay;
+    }
 }
