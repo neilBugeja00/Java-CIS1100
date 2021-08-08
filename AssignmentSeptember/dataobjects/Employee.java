@@ -6,9 +6,9 @@ public class Employee extends AnyClass{
     String surname;
     double pay;
 
-    public Employee (int iNo, String surname, double pay) {
+    public Employee (int num, String surname, double pay) {
         
-        super (iNo);
+        super (num);
         this.surname = surname;
         this.pay = pay;        
     }
@@ -18,7 +18,7 @@ public class Employee extends AnyClass{
     }
 
     public String getData(){
-        return super.getData() + " Employee " +surname+ " salary " + getSalary();
+        return super.getData() + "\nEmployee " +surname+ "\nsalary " + getSalary() +"\n";
     }
 
     public String getKey(){
