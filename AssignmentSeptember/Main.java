@@ -2,7 +2,7 @@ import dataobjects.*;
 import linearstructures.*;
 import java.util.Scanner;
 
-public class Test {
+public class Main {
     public static void main(String args[]) {
         menu();
     }
