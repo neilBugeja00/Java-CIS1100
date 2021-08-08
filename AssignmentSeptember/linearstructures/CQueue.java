@@ -71,17 +71,15 @@ public class CQueue {
         return null; //not found
     }
 
-    public changePayOfAll(int percent){
-        Node n = head;
-
+    public AnyClass changePayOfAll(int percentage){
+        Node n = root;
         while(n.getNext()!=root){
             if(n.getData()!=null){
-                if(n.getData().getKey().equalsIgnoreCase(key)){
-                    //To change percent value of object here
-                }
+                //To change percentage value
             }
             n = n.getNext();
         }
+        return null; //not found
     }
 
 
