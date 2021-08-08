@@ -1,31 +1,41 @@
 package dataobjects;
 import linearnodes.*;
 import linearstructures.*;
+import java.util.Scanner;
 
 public class Employee extends AnyClass{
     String surname;
-    double pay;
+    double salary;
 
-    public Employee (int num, String surname, double pay) {
+    public Employee (int num, String surname, double salary) {
         
         super (num);
         this.surname = surname;
-        this.pay = pay;        
+        this.salary = salary;        
     }
 
     public double getSalary(){
-        return pay;
+        return salary;
+    }
+
+    public double setSalary(double salary){
+        this.salary = salary;
+        return salary;
     }
 
     public String getData(){
-        return super.getData() + "\nEmployee " +surname+ "\nsalary " + getSalary() +"\n";
+        return super.getData() + "\nEmployee:      " +surname+ "\nsalary:        " + getSalary() +"\n";
     }
 
     public String getKey(){
         return surname;
     }
 
-    public void setName(double newPay){
-        pay = newPay;
+    public void edit(){
+        Scanner in = new Scanner(System.in);
+        System.out.println("Current Salary:" +getSalary());
+        System.out.println("Enter new salary: ");
+        double newSalary = in.nextDouble();   
+        setSalary(newSalary);    
     }
 }

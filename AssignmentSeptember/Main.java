@@ -28,10 +28,13 @@ public class Main {
     }
 
     public static void constructQueue(){
-        CQueue myQueue = new CQueue();
+        //CQueue myQueue = new CQueue();
     }
 
     public static void populateQueue(){
-
+        CQueue myQueue = new CQueue();
+        myQueue.put(new Employee(1, "bugeja", 10000));
+        myQueue.editObject("bugeja");
+        myQueue.listAll();
     }
 }

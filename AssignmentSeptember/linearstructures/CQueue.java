@@ -61,11 +61,13 @@ public class CQueue {
         while(n.getNext()!=root){
             if(n.getData()!=null){
                 if(n.getData().getKey().equalsIgnoreCase(key)){
-                    return n.getData(); //Key successfully found
+                    System.out.println("Found");                    
+                    n.getData().edit();                 
                 }
             }
             n = n.getNext();
         }
+        System.out.println("Not found");
         return null; //not found
     }
 
