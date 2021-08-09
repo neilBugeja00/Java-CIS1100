@@ -60,14 +60,12 @@ public class CQueue {
         Node n = root;
         while(n.getNext()!=root){
             if(n.getData()!=null){
-                if(n.getData().getKey().equalsIgnoreCase(key)){
-                    System.out.println("Found");                    
+                if(n.getData().getKey().equalsIgnoreCase(key)){                   
                     n.getData().edit();                 
                 }
             }
             n = n.getNext();
         }
-        System.out.println("Not found");
         return null; //not found
     }
 
@@ -81,9 +79,4 @@ public class CQueue {
         }
         return null; //not found
     }
-
-
-    
-
-
 }//end class
