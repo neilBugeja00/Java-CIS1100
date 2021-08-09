@@ -1,5 +1,4 @@
 package dataobjects;
-import java.util.Scanner;
 
 public class AnyClass{
 

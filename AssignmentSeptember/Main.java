@@ -18,7 +18,8 @@ public class Main {
             System.out.println("3. Search for employee");
             System.out.println("4. Update payment of a single person");
             System.out.println("5. Update payment of all persons by 10%");
-            System.out.println("6. Exit");
+            System.out.println("6. Present and delete first item in queue");
+            System.out.println("7. Exit");
 
             choice = in.nextInt();
 
@@ -32,18 +33,56 @@ public class Main {
                 case 4: updateEmployee(myQueue);
                     break;
                 case 5: updateAll(myQueue);
+                    break; 
+                case 6: serve(myQueue);
                     break;              
             }
-        }while(choice!=6);
+        }while(choice!=7);
     }
 
-    public static void populateQueue(CQueue myQueue){ 
-        System.out.println("");   
+    public static void populateQueue(CQueue myQueue){
+        Scanner in = new Scanner(System.in);
+        int seqNo;
+        String surname;
+        double salary = 0;
+        int hours = 0;
+
+        System.out.println("How many new EMPLOYEES: ");
+        int n = in.nextInt();
+        
+        for(int i=0; i<n; i++){
+            System.out.print("Enter sequence number:");
+            seqNo = in.nextInt();
+            System.out.print("Enter employee surname(key): ");
+            surname = in.nextLine();
+            surname = in.nextLine();
+            System.out.print("Enter employee salary: ");
+            salary = in.nextDouble();
+            System.out.println("");
+            myQueue.put(new Employee(seqNo, surname, salary));
+        }
+
+        System.out.println("How many new PART TIME EMPLOYEES: ");
+        n = in.nextInt();
+        
+        for(int i=0; i<n; i++){
+            System.out.print("Enter sequence number:");
+            seqNo = in.nextInt();
+            System.out.print("Enter employee surname(key): ");
+            surname = in.nextLine();
+            surname = in.nextLine();
+            System.out.print("Enter employee salary: ");
+            salary = in.nextDouble();
+            System.out.print("Enter employee hours: ");
+            hours = in.nextInt();
+            System.out.println("");
+            myQueue.put(new PartTimer(seqNo, surname, salary, hours));
+        }     
         
     }
 
     public static void listAll(CQueue myQueue){       
-        
+        myQueue.listAll();
     }
 
     public static void searchEmployee(CQueue myQueue){       
@@ -63,5 +102,9 @@ public class Main {
         myQueue.put(new Employee(1, "bugeja", 10000));
         myQueue.editObject("bugeja");
         myQueue.listAll();
+    }
+
+    public static void serve(CQueue myQueue){
+
     }
 }

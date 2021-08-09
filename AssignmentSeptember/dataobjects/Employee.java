@@ -24,7 +24,7 @@ public class Employee extends AnyClass{
     }
 
     public String getData(){
-        return super.getData() + "\nEmployee:      " +surname+ "\nsalary:        " + getSalary() +"\n";
+        return super.getData() + "\nEmployee:        " +surname+ "\nSalary:          " + getSalary() +"\n";
     }
 
     public String getKey(){
