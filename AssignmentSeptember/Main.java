@@ -47,7 +47,7 @@ public class Main {
         double salary = 0;
         int hours = 0;
 
-        System.out.println("How many new EMPLOYEES: ");
+        System.out.println("How many new FULL TIME EMPLOYEES: ");
         int n = in.nextInt();
         
         for(int i=0; i<n; i++){

@@ -1,0 +1,4 @@
+To Do List:
+
+1. Give error / indication that queue is full when adding new employees.
+2. Generate an automatic sequence number without using counters in for loops.

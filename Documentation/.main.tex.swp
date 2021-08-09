@@ -39,7 +39,7 @@ Machine Learning 1, 17/18\\
 
 \bigskip
 
-\section{Heterogeneous Circular Queue}
+\section{Heterogeneous Circular Queue - CQueue.java}
 
 \subsection{Construction of CQueue}
 In this section a circular queue of size 20 nodes must be created. An integer called 'CIRCULAR\_QUEUE\_SIZE' is created and given the value 20. This is done so that the queue's size is stored in one location and should it need to be changed this can easily be done. \\
@@ -70,14 +70,34 @@ test 2 again
 To list all the data in the circular queue, this method will traverse by the same method that it has been doing beforehand. The only difference is that every time a node that is filled with data is encountered, it gets the data and outputs it for the user to see. By the end of the method all the data in the queue will be displayed.\\
 
 \subsection{AnyClass editObject(String key)}
-This method will once again begin by traversing the entire queue. If it encounters an array with data it will check to see if it matches with the key that the user wishes to edit. 
+This method will once again begin by traversing the entire queue. If it encounters an array with data it will check to see if it matches with the key that the user wishes to edit. If this is the case, the key's data is acquired and used in the method edit found in Employee.java. This method is explained further down below
 \bigskip
 
 %------------------------------------------------
 
-\section{Second Exercise}
-\blindtext
+\section{Emplyee - Employee.java}
+
+When declaring an employee, he must be given:
+\\1. A number relating to the serial number
+\\2. The employee's surname
+\\3. The employee's salary which is declared as a double.\\
+\\The class has the appropriate getters and setters in place to get and set salary and get the employee's key which is the surname. A method is also created which retrieves the employee's data which includes his id number, surname(key), and salary.\\
+\\Lastly, another method is created which is used to edit the employee's salary. This method will first display's the employee's current salary by means of the getter, and later set a new salary by means of a setter.
+\bigskip 
+
+%------------------------------------------------
+\section{PartTimer - PartTimer.java}
+PartTimer extends employee as it is basically employee but with a few additions. A constructor for PartTimer is present as hours must also be declared in the case for a part time employee. The constructor makes use of supers as they are the same as employee.java. A method is present which retrieves the partTimer's hours and another method 'getData()' which overrides the method 'getData()' found in employee.java. This is important as without it the partTimer's hours cannot be viewed.
+\bigskip
+
+\section{Deliverables - Main.java}
+The menu starts by first creating the CQueue which will be used to store both types of employees. Next the menu is displayed and depending on the user's choice the menu will call a different method. Below is a list of all options and how they function:
+\subsection{Populate Queue}
+The queue must be populated with both full time and part time employees. Therefore, the method will first ask the user how many new full time employees have to be inserted. In the case of full time employees the sequence number, surname and salary are required while part time employees must also enter their working hours as per the assignment specifications. The employees are inserted into the queue by the "put" method.
 \subsection{First Subtask}
+\subsection{First Subtask}
+\subsection{Update payment of person}
+
 
 \bigskip
 
