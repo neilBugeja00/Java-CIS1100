@@ -50,7 +50,8 @@ public class CQueue {
         Node n = root;
         while(n.getNext()!=root){
             if(n.getData()!=null){
-                System.out.println(n.getData().getData() +" ");
+                //System.out.println(n.getData().getData() +" ");
+                n.show();
             }
             n = n.getNext();
         }
