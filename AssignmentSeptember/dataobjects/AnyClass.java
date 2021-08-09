@@ -17,7 +17,6 @@ public class AnyClass{
     }
 
     public String getData(){
-        //return String.valueOf(seqNo);
         return "Sequence number: "+seqNo;
     }
 
