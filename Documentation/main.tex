@@ -34,9 +34,11 @@ Machine Learning 1, 17/18\\
 %	CONTENTS
 %-------------------------------
 \section{AnyClass class}
-\blindtext
-\subsection{First Subtask}
+AnyClass is declared to only contain the integer seqNo. Getters and setters are created in order to retrieve and set said seqNo. As per the assignment specifications, three polymorphic methods were created. The first is method String getData(), which simply returns the value of seqNo. The second method is String getKey(), and seeing how seqNo is to be returned as a string, String.valueof() was used to fulfil this requirement. Finally, it was stated that for AnyClass, the method edit() should be left empty.
+\bigskip
 
+\section{Node.java}
+Class Node.java has two constructors, one which only consists of 'AnyClass data' and another which adds 'Node next' to the first.Two methods were created called 'getNext()' and 'setNext()'. These getters and setters are vital in the below class 'CQueue.java' as they will set the structure for the queue. Another two methods 'AnyClass getData()' and 'void setData(AnyClass data)' are declared. These methods are used to both get and set the data inside the nodes. Finally, a method show is created to print the data inside the node.
 \bigskip
 
 \section{Heterogeneous Circular Queue - CQueue.java}
@@ -47,27 +49,31 @@ In this section a circular queue of size 20 nodes must be created. An integer ca
 \\Secondly, a for loop is created that repeats for 'CIRCULAR\_QUEUE\_SIZE' times. In every iteration of this loop a new node is created with value null. To create this new node a method addNode is created.\\
 addNode will first check whether the root is null or not. If the root is indead null, this means that the node to be implemented is the first and therefore must be classified as being the root. However, if this is not the case, the root's next will change to point towards the current node, and the current node's change will change to point towards the root. The loop will traverse the queue until it reaches the last node, guaranteeing that the queue will be circular.\\
 \\The below diagram may help better illustrate what was explained above:
-\bigskip
-
 %Image:
 \begin{figure}[htp]
 \centering
 \includegraphics[scale=0.30]{Images/Insert.png}
 \end{figure}
+\bigskip
+
 
 By the means of the addNode method, a circular queue is successfully created of size 'CIRCULAR\_QUEUE\_SIZE'.
+\bigskip
 
 \subsection{Method boolean put(AnyClass newObj)}
 This method makes use of the same principles and ideas used to create the queue itself. Firstly, in the node class two methods are created which will be used to get data from a node and set data to a node.
 \\Secondly, in the CQueue class, the method '\emph{put}' is created. Like the method '\emph{addNode}', it will first check if the root of the queue is null. If this is the case the root is simply filled with data by using the setter. However, if the root is not null the program will traverse the queue as it has done in the previous method to create the nodes, but this time while it is visiting a node it will set data into it.\\
 \\If neither of these cases are met the method will return false, indicating that the queue is full.
+\bigskip
 
 \subsection{AnyClass serve()}
 test. jg
 test 2 again
+\bigskip
 
 \subsection{void listAll()}
 To list all the data in the circular queue, this method will traverse by the same method that it has been doing beforehand. The only difference is that every time a node that is filled with data is encountered, it gets the data and outputs it for the user to see. By the end of the method all the data in the queue will be displayed.\\
+\bigskip
 
 \subsection{AnyClass editObject(String key)}
 This method will once again begin by traversing the entire queue. If it encounters an array with data it will check to see if it matches with the key that the user wishes to edit. If this is the case, the key's data is acquired and used in the method edit found in Employee.java. This method is explained further down below
