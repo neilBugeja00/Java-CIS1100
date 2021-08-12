@@ -109,7 +109,7 @@ public class Main {
     }
 
     public static void updateAll(CQueue myQueue){       
-        
+        myQueue.changePayOfAll(10);
     }
 
     public static void editSalary(CQueue myQueue){

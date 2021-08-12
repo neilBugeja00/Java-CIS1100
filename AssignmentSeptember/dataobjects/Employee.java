@@ -38,4 +38,9 @@ public class Employee extends AnyClass{
         double newSalary = in.nextDouble();   
         setSalary(newSalary);    
     }
+
+    public void editAll(int percentage){
+        double newSalary = 5000;
+        setSalary(newSalary);
+    }
 }

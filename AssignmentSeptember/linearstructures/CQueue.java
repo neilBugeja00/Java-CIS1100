@@ -86,7 +86,7 @@ public class CQueue {
         Node n = root;
         while(n.getNext()!=root){
             if(n.getData()!=null){
-                //To change percentage value
+                n.getData().editAll(percentage);
             }
             n = n.getNext();
         }

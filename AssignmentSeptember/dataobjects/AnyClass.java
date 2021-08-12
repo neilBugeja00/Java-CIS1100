@@ -27,4 +27,8 @@ public class AnyClass{
     public void edit(){
     }
 
+    public void editAll(int percentage){
+
+    }
+
 }
