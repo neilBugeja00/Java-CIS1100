@@ -19,7 +19,8 @@ public class Main {
             System.out.println("4. Update payment of a single person");
             System.out.println("5. Update payment of all persons by 10%");
             System.out.println("6. Present and delete first item in queue");
-            System.out.println("7. Exit");
+            System.out.println("7. Generate List");
+            System.out.println("8. Exit");
 
             choice = in.nextInt();
 
@@ -30,14 +31,16 @@ public class Main {
                     break;   
                 case 3: searchEmployee(myQueue);
                     break; 
-                case 4: updateEmployee(myQueue);
+                case 4: updateEmployeePayment(myQueue);
                     break;
                 case 5: updateAll(myQueue);
                     break; 
                 case 6: serve(myQueue);
-                    break;              
+                    break;   
+                case 7: generateList(myQueue);
+                    break;            
             }
-        }while(choice!=7);
+        }while(choice!=8);
     }
 
     public static void populateQueue(CQueue myQueue){
@@ -91,12 +94,18 @@ public class Main {
         System.out.println("Enter surname(key): ");
         userSearch = in.nextLine();
         myQueue.listEmployee(userSearch);
+        System.out.println("");
 
 
     }
 
-    public static void updateEmployee(CQueue myQueue){       
-        
+    public static void updateEmployeePayment(CQueue myQueue){       
+        Scanner in = new Scanner(System.in);
+        String userSearch;   
+        System.out.println("Enter surname(key): ");
+        userSearch = in.nextLine();
+        myQueue.editObject(userSearch);
+        System.out.println("");
     }
 
     public static void updateAll(CQueue myQueue){       
@@ -104,13 +113,16 @@ public class Main {
     }
 
     public static void editSalary(CQueue myQueue){
-        System.out.println("");
-        myQueue.put(new Employee(1, "bugeja", 10000));
-        myQueue.editObject("bugeja");
-        myQueue.listAll();
     }
 
     public static void serve(CQueue myQueue){
 
+    }
+
+    public static void generateList(CQueue myQueue){
+        myQueue.put(new Employee(1, "bugeja", 50000));
+        myQueue.put(new Employee(2, "sant", 40000));
+        myQueue.put(new PartTimer(3, "curmi", 30000, 35));
+        myQueue.put(new PartTimer(4, "bocc", 20000, 12));
     }
 }
