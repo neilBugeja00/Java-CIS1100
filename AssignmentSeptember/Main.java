@@ -85,8 +85,14 @@ public class Main {
         myQueue.listAll();
     }
 
-    public static void searchEmployee(CQueue myQueue){       
-        
+    public static void searchEmployee(CQueue myQueue){    
+        Scanner in = new Scanner(System.in);
+        String userSearch;   
+        System.out.println("Enter surname(key): ");
+        userSearch = in.nextLine();
+        myQueue.listEmployee(userSearch);
+
+
     }
 
     public static void updateEmployee(CQueue myQueue){       

@@ -46,11 +46,23 @@ public class CQueue {
         return false;        
     }
 
+    public AnyClass listEmployee(String key){
+        Node n = root;
+        while(n.getNext()!=root){
+            if(n.getData()!=null){
+                if(n.getData().getKey().equalsIgnoreCase(key)){                   
+                    n.show();             
+                }
+            }
+            n = n.getNext();
+        }
+        return null; //not found
+    }
+
     public void listAll(){
         Node n = root;
         while(n.getNext()!=root){
             if(n.getData()!=null){
-                //System.out.println(n.getData().getData() +" ");
                 n.show();
             }
             n = n.getNext();
