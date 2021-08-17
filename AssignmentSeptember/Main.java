@@ -117,9 +117,6 @@ public class Main {
         myQueue.changePayOfAll(user);
     }
 
-    public static void editSalary(CQueue myQueue){
-    }
-
     public static void serve(CQueue myQueue){
 
     }
