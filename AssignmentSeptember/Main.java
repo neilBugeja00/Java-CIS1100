@@ -108,8 +108,13 @@ public class Main {
         System.out.println("");
     }
 
-    public static void updateAll(CQueue myQueue){       
-        myQueue.changePayOfAll(10);
+    public static void updateAll(CQueue myQueue){  
+        Scanner in = new Scanner(System.in);   
+        System.out.println("Enter percentage to change payments by: ");
+        System.out.println("Example: for 10% increase enter 10");
+        System.out.println("Example: for 10% decrease enter -10");
+        int user = in.nextInt();
+        myQueue.changePayOfAll(user);
     }
 
     public static void editSalary(CQueue myQueue){

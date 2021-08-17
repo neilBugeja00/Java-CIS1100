@@ -40,7 +40,8 @@ public class Employee extends AnyClass{
     }
 
     public void editAll(int percentage){
-        double newSalary = 5000;
+        double perc = percentage;
+        double newSalary = getSalary()*(1+(perc/100));
         setSalary(newSalary);
     }
 }
