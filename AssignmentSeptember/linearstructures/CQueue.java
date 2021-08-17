@@ -5,7 +5,7 @@ import linearnodes.*;
 
 public class CQueue {
     //declare queue size & set root to null
-    private final int CIRCULAR_QUEUE_SIZE = 4;
+    private final int CIRCULAR_QUEUE_SIZE = 20;
     private Node root = null;
 
     public CQueue(){
