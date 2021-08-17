@@ -90,13 +90,13 @@ public class Main {
 
     public static void searchEmployee(CQueue myQueue){    
         Scanner in = new Scanner(System.in);
-        String userSearch;   
+        String userSearch;           
         System.out.println("Enter surname(key): ");
         userSearch = in.nextLine();
-        myQueue.listEmployee(userSearch);
+        System.out.println("Enter sequence number: ");
+        int userNumber = in.nextInt();
+        myQueue.listEmployee(userSearch, userNumber);
         System.out.println("");
-
-
     }
 
     public static void updateEmployeePayment(CQueue myQueue){       

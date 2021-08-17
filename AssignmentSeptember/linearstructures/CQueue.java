@@ -67,11 +67,11 @@ public class CQueue {
         return null;
     }   
 
-    public AnyClass listEmployee(String key){
+    public AnyClass listEmployee(String key, int seqNo){
         Node n = root;
         while(n.getNext()!=root){
             if(n.getData()!=null){
-                if(n.getData().getKey().equalsIgnoreCase(key)){                   
+                if(n.getData().getKey().equalsIgnoreCase(key) && n.getData().getSeqNo() == seqNo){                   
                     n.show();             
                 }
             }
