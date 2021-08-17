@@ -5,12 +5,12 @@ import linearnodes.*;
 
 public class CQueue {
     //declare queue size & set root to null
-    private final int CIRCULAR_QUEUE_SIZE = 20;
+    private final int CIRCULAR_QUEUE_SIZE = 4;
     private Node root = null;
 
     public CQueue(){
         //create circular list with previously declared size
-        for(int i=0; i<CIRCULAR_QUEUE_SIZE; i++){
+        for(int i=0; i<CIRCULAR_QUEUE_SIZE+1; i++){
             addNode(new Node(null));
         }
     }
@@ -25,8 +25,8 @@ public class CQueue {
             while(n.getNext()!=root){
                 n = n.getNext();
             }
-            n.setNext(node);
             node.setNext(root);
+            n.setNext(node);
         }        
     }
 
@@ -45,6 +45,28 @@ public class CQueue {
         }
         return false;        
     }
+
+    public AnyClass serve(){
+        Node n = root;
+        Node first = root;
+
+        //If empty
+        if(root.getData() == null){
+            System.out.println("List is empty");
+            return null;
+        }else{
+            System.out.println("Subject deleted: ");
+            System.out.println("");
+            root.show();
+            while(n.getNext()!=root){
+                //gives each node the value of the node infront of it.
+                n.setData(n.getNext().getData());
+                n = n.getNext(); 
+            }
+        }
+
+        return null;
+    }   
 
     public AnyClass listEmployee(String key){
         Node n = root;

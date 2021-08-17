@@ -115,10 +115,13 @@ public class Main {
         System.out.println("Example: for 10% decrease enter -10");
         int user = in.nextInt();
         myQueue.changePayOfAll(user);
+        System.out.println("Payment Updated!");
+        System.out.println("New list:");
+        myQueue.listAll();
     }
 
     public static void serve(CQueue myQueue){
-
+        myQueue.serve();
     }
 
     public static void generateList(CQueue myQueue){
