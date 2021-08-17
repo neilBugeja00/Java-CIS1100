@@ -1,6 +1,4 @@
 package dataobjects;
-import linearnodes.*;
-import linearstructures.*;
 import java.util.Scanner;
 
 public class Employee extends AnyClass{

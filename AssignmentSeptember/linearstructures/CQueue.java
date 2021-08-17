@@ -48,7 +48,6 @@ public class CQueue {
 
     public AnyClass serve(){
         Node n = root;
-        Node first = root;
 
         //If empty
         if(root.getData() == null){
