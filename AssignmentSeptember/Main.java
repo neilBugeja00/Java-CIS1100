@@ -17,8 +17,8 @@ public class Main {
             System.out.println("2. List all object in queue");
             System.out.println("3. Search for employee");
             System.out.println("4. Update payment of a single person");
-            System.out.println("5. Update payment of all persons by 10%");
-            System.out.println("6. Present and delete first item in queue");
+            System.out.println("5. Update payment of all persons by percentage");
+            System.out.println("6. Present and delete first item in queue (SERVE)");
             System.out.println("7. Generate List");
             System.out.println("8. Exit");
 
