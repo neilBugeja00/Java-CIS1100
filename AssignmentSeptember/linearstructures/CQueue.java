@@ -72,11 +72,14 @@ public class CQueue {
         while(n.getNext()!=root){
             if(n.getData()!=null){
                 if(n.getData().getKey().equalsIgnoreCase(key) && n.getData().getSeqNo() == seqNo){                   
-                    n.show();             
+                    n.show();
+                    return null;    
                 }
             }
             n = n.getNext();
         }
+        System.out.println("");
+        System.out.println("NO MATCH WAS FOUND");
         return null; //not found
     }
 

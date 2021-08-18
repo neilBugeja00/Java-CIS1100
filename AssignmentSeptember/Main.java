@@ -56,43 +56,42 @@ public class Main {
         int hours = 0;
 
         try{
-        System.out.println("How many new FULL TIME EMPLOYEES: ");
-        n = in.nextInt();
-        
-        for(int i=0; i<n; i++){
-            System.out.print("Enter sequence number:");
-            seqNo = in.nextInt();
-            System.out.print("Enter employee surname(key): ");
-            surname = in.nextLine();
-            surname = in.nextLine();
-            System.out.print("Enter employee salary: ");
-            salary = in.nextDouble();
-            System.out.println("");
-            myQueue.put(new Employee(seqNo, surname, salary));
-        }
+            System.out.println("How many new FULL TIME EMPLOYEES: ");
+            n = in.nextInt();
+            
+            for(int i=0; i<n; i++){
+                System.out.print("Enter sequence number:");
+                seqNo = in.nextInt();
+                System.out.print("Enter employee surname(key): ");
+                surname = in.nextLine();
+                surname = in.nextLine();
+                System.out.print("Enter employee salary: ");
+                salary = in.nextDouble();
+                System.out.println("");
+                myQueue.put(new Employee(seqNo, surname, salary));
+            }
 
-        System.out.println("How many new PART TIME EMPLOYEES: ");
-        n = in.nextInt();
-        
-        for(int i=0; i<n; i++){
-            System.out.print("Enter sequence number:");
-            seqNo = in.nextInt();
-            System.out.print("Enter employee surname(key): ");
-            surname = in.nextLine();
-            surname = in.nextLine();
-            System.out.print("Enter employee salary: ");
-            salary = in.nextDouble();
-            System.out.print("Enter employee hours: ");
-            hours = in.nextInt();
+            System.out.println("How many new PART TIME EMPLOYEES: ");
+            n = in.nextInt();
+            
+            for(int i=0; i<n; i++){
+                System.out.print("Enter sequence number:");
+                seqNo = in.nextInt();
+                System.out.print("Enter employee surname(key): ");
+                surname = in.nextLine();
+                surname = in.nextLine();
+                System.out.print("Enter employee salary: ");
+                salary = in.nextDouble();
+                System.out.print("Enter employee hours: ");
+                hours = in.nextInt();
+                System.out.println("");
+                myQueue.put(new PartTimer(seqNo, surname, salary, hours));
+            }
+        }catch(InputMismatchException e){
             System.out.println("");
-            myQueue.put(new PartTimer(seqNo, surname, salary, hours));
-        }
-    }catch(InputMismatchException e){
-        System.out.println("");
-        System.out.println("ERROR: WRONG INPUT TYPE!!");
-        System.out.println("");
-    }     
-        
+            System.out.println("ERROR: WRONG INPUT TYPE!!");
+            System.out.println("");
+        }   
     }
 
     public static void listAll(CQueue myQueue){   
@@ -104,11 +103,18 @@ public class Main {
     public static void searchEmployee(CQueue myQueue){  
         System.out.println("");  
         Scanner in = new Scanner(System.in);
-        String userSearch;           
+        String userSearch;   
+        int userNumber=0;        
         System.out.println("Enter surname(key): ");
         userSearch = in.nextLine();
-        System.out.println("Enter sequence number: ");
-        int userNumber = in.nextInt();
+        try{
+            System.out.println("Enter sequence number: ");
+            userNumber = in.nextInt();
+        }catch(InputMismatchException e){
+            System.out.println("");
+            System.out.println("ERROR: WRONG INPUT TYPE!!");
+            System.out.println("");
+        }
         myQueue.listEmployee(userSearch, userNumber);
         System.out.println("");
     }
@@ -145,6 +151,6 @@ public class Main {
         myQueue.put(new Employee(1, "bugeja", 50000));
         myQueue.put(new Employee(2, "sant", 40000));
         myQueue.put(new PartTimer(3, "curmi", 30000, 35));
-        myQueue.put(new PartTimer(4, "bocc", 20000, 12));
+        myQueue.put(new PartTimer(4, "gauchi", 20000, 12));
     }
 }

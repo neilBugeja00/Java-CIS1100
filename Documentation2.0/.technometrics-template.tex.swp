@@ -144,6 +144,8 @@ This method simply calls the method ´\emph{listAll()}´ developed in the ´\emp
 
 \subsection{Search for Employee}
 To fulfil this requirement, first a method of type ´\emph{AnyClass}´ called ´\emph{listEmployee}´ was created in the ´\emph{CQueue}´ class. This method requires a String '\emph{key}' and an int ´\emph{seqNo}´. These variables are the variables that the user will input and used to search the queue with. With that said, the method will traverse the entire queue and search for an objects which matches the user's ´\emph{seqNo}´ and ´\emph{key}´. Care was taken for the searching to not be case sensitive. Should an object with matching credentials be found, the method will output said object. Else nothing will happen.
+\bigskip
+\\Once again, error handling was implemented in the case that the user should enter a string value instead of an integer when supplying the ´\emph{seqNo}´.
 
 \subsection{Update Payment of a single Employee}
 To complete this task, the method ´\emph{editObject}´ which was previously created is used. In this section, the method simply asks the user for the employee's surname(key) which needs to be edited, and said surname is inserted into the method ´\emph{editObject()}´. This method works fine, however should the queue contain two or more objects with the same surname, the user must edit all salary values. The same procedure used in ´Search for employee´ where both sequence number and surname must be entered cannot be used as that would violate the requirements placed in the method ´\emph{editObject()}´ in which only a String key must be entered in it's parameters.
@@ -179,12 +181,52 @@ Confirming that the mistake displays the correct error message and takes the use
 \includegraphics[scale=0.30]{Images/Testing 2/1.png}
 \end{figure}
 
-Confirming that when creating the second object and encountering an error, the first object already completed is stored correctly in the queue.
+Confirming that when creating the second object and encountering an error, the first object already completed is stored correctly in the queue:
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.30]{Images/Testing 2/2.png}
 \end{figure}
+\newpage
+
 \subsection{Searching of employee}
+Confirming that search method works along with the search not being case sensitive:
+\bigskip
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.40]{Images/Testing 3/1.png}
+\end{figure}
+
+\newpage
+Confirming that the search method works when having two objects with the same sequence number but different surname
+\bigskip
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 3/2.png}
+\end{figure}
+
+Confirming that the search methods works when having two objects with the same surname but different sequence number.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 3/3.png}
+\end{figure}
+
+\newpage
+Error handling works as intended.
+\bigskip
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 3/4.png}
+\end{figure}
+
+Searching works for part time employees
+\bigskip
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 3/5.png}
+\end{figure}
+\bigskip
+\newpage
+
 \subsection{Searching of employee with duplicates}
 \subsection{Searching of employee with no match}
 \subsection{Update payment of a single person}
