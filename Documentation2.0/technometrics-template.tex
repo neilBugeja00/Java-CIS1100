@@ -34,7 +34,7 @@
 
 \if0\blind
 {
-  \title{\bf Java Assignemtn CIS 1100}
+  \title{\bf Java Assignment CIS 1100}
   \author{Neil Bugeja 51000L
     \\Circular Queue Implementation
     \\Year 1, September Session\bigskip \bigskip}
@@ -69,6 +69,7 @@ The class \emph{´AnyClass´} is declared to only contain the integer \emph{´se
 Class ´\emph{Node.java}´ has two constructors, one which only consists of ´\emph{AnyClass data}´ and another which adds '\emph{Node next}' to the first.Two methods were created called ´\emph{getNext()}´ and ´\emph{setNext()}´. These getters and setters are vital in the below class ´\emph{CQueue.java}´ as they will set the structure for the queue. Another two methods ´\emph{AnyClass getData()}´ and ´\emph{void setData(AnyClass data)}´ are declared. These methods are used to both get and set the data inside the nodes. Finally, a method show is created to print the data inside the node.
 \bigskip
 
+\newpage
 \section{Heterogeneous Circular Queue - CQueue.java}
 \bigskip
 
@@ -82,10 +83,6 @@ In this section a circular queue of size 20 nodes must be created. An integer ca
 \centering
 \includegraphics[scale=0.30]{Images/Insert.png}
 \end{figure}
-\bigskip
-
-
-By the means of the ´\emph{addNode}´ method, a circular queue is successfully created of size \emph{´CIRCULAR\_QUEUE\_SIZE´}.
 \bigskip
 
 \subsection{Method boolean put(AnyClass newObj)}
@@ -115,7 +112,7 @@ This method traverses the entire queue and in each instance where data is encoun
 \bigskip
 
 %------------------------------------------------
-
+\newpage
 \section{Emplyee - Employee.java}
 
 When declaring an employee, the following must be assigned:
@@ -132,6 +129,7 @@ When declaring an employee, the following must be assigned:
 PartTimer extends employee as it is basically employee but with a few additions. A constructor for PartTimer is present as hours must also be declared in the case for a part time employee. The constructor makes use of supers as they are the same as ´\emph{Employee.java}´. A method is present which retrieves the partTimer's hours and another method ´\emph{getData()}´ which overrides the method ´\emph{getData()}´ found in ´\emph{Employee.java}´. This is important as without it the partTimer's hours cannot be viewed.
 \bigskip
 
+\newpage
 \section{Deliverables - Main.java}
 The menu starts by first creating the ´\emph{CQueue}´ which will be used to store both types of employees. Next, the menu is displayed, giving the user a variety of options. Depending on the option chosen, a switch is present to employ the method corresponding with the user's request.\\
 \\Below is a list of all options and an explanation on how they function:
@@ -154,6 +152,33 @@ This method enters the user's chosen percentage change into the method ´\emph{c
 \subsection{Present and delete first item in queue (SERVE)}
 This method is present to make use of the serve method developed earlier in the 'CQueue' class.
 
+\subsection{Generate List}
+For testing purposes, this method was created were a predetermined two employees and two part time employees are created by means of the ´\emph{put}´ method. This eases the testing process by not having to create employees every time testing must be done.
+
+%----------------------------------------------------------------
+\newpage
+\section{Testing}
+\subsection{Populating the queue with 3 employees and 2 part timers}
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 1/1.png}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 1/2.png}
+\end{figure}
+
+All items entered in the queue are properly displayed. This confirms that both the method to populate the queue and the method to list all objects in the queue are operational.
+\subsection{Searching of employee}
+\subsection{Searching of employee with duplicates}
+\subsection{Searching of employee with no match}
+\subsection{Update payment of a single person}
+\subsection{Update payment of a single person when duplicates are present}
+\subsection{Update payment of all people by positive percentage}
+\subsection{Update payment of all people by negative percentage}
+\subsection{Serve}
+\subsection{Add new item after serve to guarantee it is working as intended}
 \bigskip
 %------------------------------------------------
 \newpage
