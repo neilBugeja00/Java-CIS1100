@@ -1,6 +1,7 @@
 \documentclass[a4paper]{article} 
 \input{head}
 \usepackage{graphicx}
+\userpackage{listings}
 \begin{document}
 \graphicspath{{home/Neil/Computing and business/Year 1/Semester 1/Java-CIS1100/Documentation/Images}}
 
@@ -126,8 +127,49 @@ This method enters the user's chosen percentage change into the method 'changePa
 \subsection{Present and delete first item in queue (SERVE)}
 This method is present to make use of the serve method developed earlier in the 'CQueue' class.
 
-
 \bigskip
+%------------------------------------------------
+\section{Source Code}
+\bigskip
+
+\subsection{AnyClass class}
+\begin{verbatim*}
+package dataobjects;
+
+public class AnyClass{
+
+    public int seqNo;
+
+    public AnyClass(int seqNo){
+        this.seqNo = seqNo;
+    }
+
+    public int getSeqNo(){
+        return seqNo;
+    }
+
+    public void setSeqNo(int seqNo){
+        this.seqNo = seqNo;
+    }
+
+    public String getData(){
+        return "Sequence number: "+seqNo;
+    }
+
+    public String getKey(){
+        return String.valueOf(seqNo);
+    }
+
+    public void edit(){
+    }
+
+    public void editAll(int percentage){
+
+    }
+
+}
+\end{verbatim*}
+
 
 %------------------------------------------------
 
