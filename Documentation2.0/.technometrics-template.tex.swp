@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 %\usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[utf8]{inputenc}
 \usepackage{tabularx}
 \usepackage{longtable}
 \usepackage{listings}
@@ -61,8 +62,15 @@
 \spacingset{1.8} % DON'T change the spacing!
 
 %-------------------------------
+%	TABLE OF CONTENTS
+
+\tableofcontents
+%-------------------------------
+
+%-------------------------------
 %	CONTENTS
 %-------------------------------
+\newpage
 \section{AnyClass class}
 The class \emph{´AnyClass´} is declared to only contain the integer \emph{´seqNo´}. Getters and setters are created in order to retrieve and set said \emph{´seqNo´}. As per the assignment specifications, three polymorphic methods were created. The first is method \emph{´String getData()´}, which simply returns the value of ´\emph{seqNo}´. The second method is ´\emph{String getKey()}´, and seeing how ´\emph{seqNo}´ is to be returned as a string, ´\emph{String.valueof()}´ was used to fulfil this requirement. Finally, it was stated that for ´\emph{AnyClass}´, the method ´\emph{edit()}´ should be left empty.
 \bigskip
