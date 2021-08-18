@@ -135,10 +135,13 @@ public class Main {
         System.out.println("Enter percentage to change payments by: ");
         System.out.println("Example: for 10% increase enter 10");
         System.out.println("Example: for 10% decrease enter -10");
+        System.out.println("Enter choice: ");
         int user = in.nextInt();
         myQueue.changePayOfAll(user);
+        System.out.println("");
         System.out.println("Payment Updated!");
         System.out.println("New list:");
+        System.out.println("");
         myQueue.listAll();
     }
 

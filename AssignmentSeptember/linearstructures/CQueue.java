@@ -80,7 +80,7 @@ public class CQueue {
         }
         System.out.println("");
         System.out.println("NO MATCH WAS FOUND");
-        return null; //not found
+        return null;
     }
 
     public void listAll(){
@@ -98,11 +98,14 @@ public class CQueue {
         while(n.getNext()!=root){
             if(n.getData()!=null){
                 if(n.getData().getKey().equalsIgnoreCase(key)){                   
-                    n.getData().edit();                 
+                    n.getData().edit();   
+                    return null;              
                 }
             }
             n = n.getNext();
         }
+        System.out.println("");
+        System.out.println("NO MATCH WAS FOUND");
         return null; //not found
     }
 

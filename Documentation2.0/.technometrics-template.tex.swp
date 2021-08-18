@@ -148,7 +148,7 @@ To fulfil this requirement, first a method of type ´\emph{AnyClass}´ called ´
 \\Once again, error handling was implemented in the case that the user should enter a string value instead of an integer when supplying the ´\emph{seqNo}´.
 
 \subsection{Update Payment of a single Employee}
-To complete this task, the method ´\emph{editObject}´ which was previously created is used. In this section, the method simply asks the user for the employee's surname(key) which needs to be edited, and said surname is inserted into the method ´\emph{editObject()}´. This method works fine, however should the queue contain two or more objects with the same surname, the user must edit all salary values. The same procedure used in ´Search for employee´ where both sequence number and surname must be entered cannot be used as that would violate the requirements placed in the method ´\emph{editObject()}´ in which only a String key must be entered in it's parameters.
+To complete this task, the method ´\emph{editObject}´ which was previously created is used. In this section, the method simply asks the user for the employee's surname(key) which needs to be edited, and said surname is inserted into the method ´\emph{editObject()}´. This method works fine, however should the queue contain two or more objects with the same surname, the user will only be given the option to edit the salary of the employee that is first in the queue. The same procedure used in ´Search for employee´ where both sequence number and surname must be entered cannot be used as that would violate the requirements placed in the method ´\emph{editObject()}´ in which only a String key must be entered in it's parameters.
 
 \subsection{Update payment of all persons by percentage}
 This method enters the user's chosen percentage change into the method ´\emph{changePayOfAll()}´ in which the necessary adjustments will be made to all employee's salaries. After this, the list of all employees along with their salaries is displayed, to show the user of all the changes made. This method will also work with negative numbers, should the user wish to decrease the employee's salary.
@@ -196,29 +196,37 @@ Confirming that search method works along with the search not being case sensiti
 \includegraphics[scale=0.40]{Images/Testing 3/1.png}
 \end{figure}
 
-\newpage
-Confirming that the search method works when having two objects with the same sequence number but different surname
-\bigskip
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.30]{Images/Testing 3/2.png}
-\end{figure}
-
-Confirming that the search methods works when having two objects with the same surname but different sequence number.
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.30]{Images/Testing 3/3.png}
-\end{figure}
-
-\newpage
-Error handling works as intended.
+Error handling works as intended:
 \bigskip
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.30]{Images/Testing 3/4.png}
 \end{figure}
 
-Searching works for part time employees
+\newpage
+Confirming that the search method works when having two objects with the same sequence number but different surname:
+\bigskip
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 3/2.png}
+\end{figure}
+
+Confirming that the search methods works when having two objects with the same surname but different sequence number:
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 3/3.png}
+\end{figure}
+
+\newpage
+
+
+Searching with no match:
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 3/6.png}
+\end{figure}
+
+Searching works for part time employees:
 \bigskip
 \begin{figure}[h]
 \centering
@@ -227,14 +235,47 @@ Searching works for part time employees
 \bigskip
 \newpage
 
-\subsection{Searching of employee with duplicates}
-\subsection{Searching of employee with no match}
 \subsection{Update payment of a single person}
-\subsection{Update payment of a single person when duplicates are present}
-\subsection{Update payment of all people by positive percentage}
-\subsection{Update payment of all people by negative percentage}
+Confirming payment update works:
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 4/1_1.png}
+\includegraphics[scale=0.30]{Images/Testing 4/1_2.png}
+\end{figure}
+
+When no match is found:
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 4/2.png}
+\end{figure}
+
+\newpage
+Update payment of a single person when duplicates are present:
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.30]{Images/Testing 4/3.png}
+\end{figure}
+
+\newpage
+\subsection{Update payment of all people}
+Update payment by using a positive integer (5) and a negative integer (-15):
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{Images/Testing 5/1.png}
+\includegraphics[scale=0.45]{Images/Testing 5/2.png}
+\end{figure}
+\newpage
 \subsection{Serve}
-\subsection{Add new item after serve to guarantee it is working as intended}
+Confirming that serve is working as intended:
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{Images/Testing 6/1.png}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.55]{Images/Testing 6/2.png}
+\end{figure}
 \bigskip
 %------------------------------------------------
 \newpage
