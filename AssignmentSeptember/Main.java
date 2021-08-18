@@ -1,5 +1,7 @@
 import dataobjects.*;
 import linearstructures.*;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -12,6 +14,7 @@ public class Main {
         int choice;
         Scanner in = new Scanner(System.in);
         do{
+            System.out.println("=================================================");
             System.out.println("Please enter your selection:");
             System.out.println("1. Populate queue");            
             System.out.println("2. List all object in queue");
@@ -44,14 +47,17 @@ public class Main {
     }
 
     public static void populateQueue(CQueue myQueue){
+        System.out.println("");
         Scanner in = new Scanner(System.in);
         int seqNo;
+        int n;
         String surname;
         double salary = 0;
         int hours = 0;
 
+        try{
         System.out.println("How many new FULL TIME EMPLOYEES: ");
-        int n = in.nextInt();
+        n = in.nextInt();
         
         for(int i=0; i<n; i++){
             System.out.print("Enter sequence number:");
@@ -80,15 +86,23 @@ public class Main {
             hours = in.nextInt();
             System.out.println("");
             myQueue.put(new PartTimer(seqNo, surname, salary, hours));
-        }     
+        }
+    }catch(InputMismatchException e){
+        System.out.println("");
+        System.out.println("ERROR: WRONG INPUT TYPE!!");
+        System.out.println("");
+    }     
         
     }
 
-    public static void listAll(CQueue myQueue){       
+    public static void listAll(CQueue myQueue){   
+        System.out.println("");    
         myQueue.listAll();
+        System.out.println("");
     }
 
-    public static void searchEmployee(CQueue myQueue){    
+    public static void searchEmployee(CQueue myQueue){  
+        System.out.println("");  
         Scanner in = new Scanner(System.in);
         String userSearch;           
         System.out.println("Enter surname(key): ");
@@ -99,7 +113,8 @@ public class Main {
         System.out.println("");
     }
 
-    public static void updateEmployeePayment(CQueue myQueue){       
+    public static void updateEmployeePayment(CQueue myQueue){   
+        System.out.println("");    
         Scanner in = new Scanner(System.in);
         String userSearch;   
         System.out.println("Enter surname(key): ");
@@ -109,6 +124,7 @@ public class Main {
     }
 
     public static void updateAll(CQueue myQueue){  
+        System.out.println("");
         Scanner in = new Scanner(System.in);   
         System.out.println("Enter percentage to change payments by: ");
         System.out.println("Example: for 10% increase enter 10");
@@ -121,6 +137,7 @@ public class Main {
     }
 
     public static void serve(CQueue myQueue){
+        System.out.println("");
         myQueue.serve();
     }
 
