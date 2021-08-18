@@ -1,34 +1,57 @@
-\documentclass[a4paper]{article} 
-\input{head}
+\documentclass[12pt]{article}
+%\usepackage{amsmath}
 \usepackage{graphicx}
+%\usepackage{enumerate}
+\usepackage{natbib} %comment out if you do not have the package
+\usepackage{url} % not crucial - just used below for the URL 
+
+%\pdfminorversion=4
+% NOTE: To produce blinded version, replace "0" with "1" below.
+\newcommand{\blind}{0}
+
+% DON'T change margins - should be 1 inch all around.
+\addtolength{\oddsidemargin}{-.5in}%
+\addtolength{\evensidemargin}{-1in}%
+\addtolength{\textwidth}{1in}%
+\addtolength{\textheight}{1.7in}%
+\addtolength{\topmargin}{-1in}%
+
+
 \begin{document}
-\graphicspath{{home/Neil/Computing and business/Year 1/Semester 1/Java-CIS1100/Documentation/Images}}
 
-%-------------------------------
-%	TITLE SECTION
-%-------------------------------
+%\bibliographystyle{natbib}
 
-\fancyhead[C]{}
-\hrule \medskip % Upper rule
-\begin{minipage}{0.295\textwidth} 
-\raggedright
-\footnotesize
-NEIL BUGEJA\hfill\\   
-51000L\hfill\\
-\end{minipage}
-\begin{minipage}{0.4\textwidth} 
-\centering 
-\large 
-JAVA ASSIGNMENT\\ 
-\normalsize 
-Machine Learning 1, 17/18\\ 
-\end{minipage}
-\begin{minipage}{0.295\textwidth} 
-\raggedleft
-\today\hfill\\
-\end{minipage}
-\medskip\hrule 
+\def\spacingset#1{\renewcommand{\baselinestretch}%
+{#1}\small\normalsize} \spacingset{1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\if0\blind
+{
+  \title{\bf Java Assignemtn CIS 1100}
+  \author{Neil Bugeja 51000L
+    \\Circular Queue Implementation
+    \\Year 1, September Session\bigskip \bigskip}
+  \maketitle
+} \fi
+
+\if1\blind
+{
+  \bigskip
+  \bigskip
+  \bigskip
+  \begin{center}
+    {\LARGE\bf Title}
+\end{center}
+  \medskip
+} \fi
+
 \bigskip
+
+
+\newpage
+\spacingset{1.8} % DON'T change the spacing!
 
 %-------------------------------
 %	CONTENTS
@@ -51,7 +74,7 @@ In this section a circular queue of size 20 nodes must be created. An integer ca
 'addNode' will first check whether the root is null or not. If the root is indead null, this means that the node to be implemented is the first and therefore must be classified as being the root. However, if this is not the case, the root's next will change to point towards the current node, and the current node's next will change to point towards the root. The loop will traverse the queue until it reaches the last node, guaranteeing that the queue will be circular.\\
 \\The below diagram may help better illustrate what was explained above:
 %Image:
-\begin{figure}[H]
+\begin{figure}
 \centering
 \includegraphics[scale=0.30]{Images/Insert.png}
 \end{figure}
@@ -171,5 +194,4 @@ public class AnyClass{
 
 
 %------------------------------------------------
-
 \end{document}
